@@ -41,3 +41,9 @@ file.close()
 encodeListKnown, studentIds = encodeListKnownWithIds
 # print(studentIds)
 print("Encode File Loaded")
+
+modeType = 0
+counter = 0
+id = -1
+imgStudent = []
+
