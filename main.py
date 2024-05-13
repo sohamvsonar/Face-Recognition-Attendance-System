@@ -11,15 +11,16 @@ from firebase_admin import storage
 import numpy as np
 from datetime import datetime
 
-cred = credentials.Certificate("serviceAccountKey.json")
+cred = credentials.Certificate("service_account_Key.json")
 firebase_admin.initialize_app(cred, {
-    'databaseURL': "",
-    'storageBucket': ""
+    'databaseURL': "https://fras-ee578-default-rtdb.firebaseio.com/",
+    'storageBucket': "fras-ee578.appspot.com"
 })
+
 
 bucket = storage.bucket()
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
 
@@ -91,7 +92,7 @@ while True:
                 studentInfo = db.reference(f'Students/{id}').get()
                 print(studentInfo)
                 # Get the Image from the storage
-                blob = bucket.get_blob(f'Images/{id}.png')
+                blob = bucket.get_blob(f'images/{id}.png')
                 array = np.frombuffer(blob.download_as_string(), np.uint8)
                 imgStudent = cv2.imdecode(array, cv2.COLOR_BGRA2BGR)
                 # Update data of attendance
@@ -134,8 +135,9 @@ while True:
                     offset = (414 - w) // 2
                     cv2.putText(imgBackground, str(studentInfo['name']), (808 + offset, 445),
                                 cv2.FONT_HERSHEY_COMPLEX, 1, (50, 50, 50), 1)
+                    imgStudent_resized = cv2.resize(imgStudent, (216, 216))
+                    imgBackground[175:175 + 216, 909:909 + 216] = imgStudent_resized
 
-                    imgBackground[175:175 + 216, 909:909 + 216] = imgStudent
 
                 counter += 1
 
