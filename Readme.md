@@ -12,7 +12,7 @@ This project is a Face Recognition Attendance System that uses a webcam to recog
 
 ## Prerequisites
 
-- Python 3.x
+- Python 3 and above
 - OpenCV
 - face_recognition
 - cvzone
@@ -24,7 +24,7 @@ This project is a Face Recognition Attendance System that uses a webcam to recog
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/yourusername/face-recognition-attendance-system.git
+    git clone https://github.com/sohamvsonar/Face-Recognition-Attendance-System.git
     cd face-recognition-attendance-system
     ```
 
@@ -56,6 +56,34 @@ face-recognition-attendance-system/
 │       ├── mode1.png
 │       ├── mode2.png
 │       └── ... (other mode images)
-├── EncodeFile.p
+├── Encodegenerator.py
+├──database.py
 ├── service_account_Key.json
 └── main.py
+
+## Firebase Structure
+Ensure your Firebase Realtime Database follows this structure:
+JSON
+{
+  "Students": {
+    "student_id_1": {
+      "name": "John Doe",
+      "major": "Computer Science",
+      "standing": "Senior",
+      "year": "4",
+      "starting_year": "2020",
+      "total_attendance": 10,
+      "last_attendance_time": "2024-05-17 10:00:00"
+    },
+    ...
+  }
+}
+
+
+## Acknowledgements
+- face_recognition library for face detection and recognition.
+- OpenCV for image processing.
+- Firebase for backend services.
+
+## Contact
+If you have any questions or suggestions, feel free to open an issue or contact me at soham.sonar427@gmail.com.
