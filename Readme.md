@@ -59,7 +59,7 @@ face-recognition-attendance-system/
 ├── Encodegenerator.py
 ├──database.py
 ├── service_account_Key.json
-└── main.py
+└── main.py ```
 
 ## Firebase Structure
 Ensure your Firebase Realtime Database follows this structure:
