@@ -65,6 +65,7 @@ face-recognition-attendance-system/
 ## Firebase Structure
 Ensure your Firebase Realtime Database follows this structure:
 JSON
+```
 {
   "Students": {
     "student_id_1": {
@@ -79,7 +80,7 @@ JSON
     ...
   }
 }
-
+```
 
 ## Acknowledgements
 - face_recognition library for face detection and recognition.
