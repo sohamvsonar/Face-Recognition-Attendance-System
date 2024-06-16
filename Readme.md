@@ -88,4 +88,4 @@ JSON
 - Firebase for backend services.
 
 ## Contact
-If you have any questions or suggestions, feel free to open an issue or contact me at soham.sonar427@gmail.com or https://www.linkedin.com/in/sohamsonar23/.
+If you have any questions or suggestions, feel free to open an issue or contact me @ soham.sonar427@gmail.com or https://www.linkedin.com/in/sohamsonar23/.
